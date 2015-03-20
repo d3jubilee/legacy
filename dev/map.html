@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="eng" class="no-js lt-ie9 lt-ie8 lt-ie7"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>D3 | Redefine Growth</title>
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+
+     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" media="Screen">
+    <script src="js/modernizr.custom.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('require', 'displayfeatures');
+  ga('create', 'UA-49627023-1', 'd3jubilee.com');
+  ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="img/d3logolong_white.png" width="220"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav" id="menu">
+                <li><a href="about.html">about</a></li>
+              
+                 <li><a href="d3plus.html">D3<span id="plus">+</span></a></li>
+                <li><a href="engine.html">Impact Engine</a></li>
+                <li><a href="map.html">Impact Map</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero" id="map">
+    
+
+
+      
+    </div>
+
+    <div class="main">
+        <section class="brand">
+         <h1>impact <span class="thin-font">map | Find the impact</span></h1>
+         <p>D3 impact map depicts D3-supported impact venture investments on a thematic basis over the world.We keep pursuing the role of bridging between entrepreneur and investor</p>
+          
+        </section>
+      </div>
+    
+    <div class="main" id="impact">
+        <ul class="grid-box">
+          <li>
+            <a href="http://www.hopemaker.kr" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">Hopemakers</h3>
+              <span class="grid-box-catg"><img src="img/sector/finance.png"/></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.greencar.co.kr" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">green car</h3>
+              <span class="grid-box-catg"><img src="img/sector/sharing.png"/></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.ridepal.com" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">RidePal</h3>
+              <span class="grid-box-catg"><img src="img/sector/sharing.png"/></span>
+            </a>
+          </li>
+
+        
+
+          <li>
+            <a href="http://www.yerdle.com" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">Yerdle</h3>
+              <span class="grid-box-catg"><img src="img/sector/sharing.png"/></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.copiaglobal.com" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">Copia</h3>
+              <span class="grid-box-catg"><img src="img/sector/sharing.png"/></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.root3tech.com" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">Root3</h3>
+              <span class="grid-box-catg"><img src="img/sector/energy.png"/></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.sunfunder.com" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">SunFunder</h3>
+              <span class="grid-box-catg"><img src="img/sector/energy.png"/></span>
+            </a>
+          </li>
+
+         <!--  <li>
+            <a href="#">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">SEVAMOB</h3>
+              <span class="grid-box-catg"><img src="img/sector/healthcare.png"/></span>
+            </a>
+          </li> -->
+
+          <li>
+            <a href="http://www.labdoor.com" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">LabDoor</h3>
+              <span class="grid-box-catg"><img src="img/sector/healthcare.png"/></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.noom.com" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">Noom</h3>
+              <span class="grid-box-catg"><img src="img/sector/healthcare.png"/></span>
+            </a>
+          </li>
+
+          <!-- <li>
+            <a href="#">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">REBBLE</h3>
+              <span class="grid-box-catg"><img src="img/sector/healthcare.png"/></span>
+            </a>
+          </li> -->
+
+          <!-- <li>
+            <a href="http://www.dlohaiti.com" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">dloHaiti</h3>
+              <span class="grid-box-catg"><img src="img/sector/healthcare.png"/></span>
+            </a>
+          </li> -->
+
+          <li>
+            <a href="http://www.musicalmobydick.com" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">Musical MobyDick</h3>
+              <span class="grid-box-catg"><img src="img/sector/education.png"/></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.knowre.com" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">KnowRe</h3>
+              <span class="grid-box-catg"><img src="img/sector/education.png"/></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.uclass.org" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">UClass</h3>
+              <span class="grid-box-catg"><img src="img/sector/education.png"/></span>
+            </a>
+          </li>
+
+           <li>
+            <a href="http://www.lumni.net" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">Lumni</h3>
+              <span class="grid-box-catg"><img src="img/sector/education.png"/></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://www.missionmarkets.com" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">Mission Market</h3>
+              <span class="grid-box-catg"><img src="img/sector/finance.png"/></span>
+            </a>
+          </li>
+          <li>
+            <a href="http://sevamob.com/gaon/" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">Sevamob</h3>
+              <span class="grid-box-catg"><img src="img/sector/healthcare.png"/></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://locomotivelabs.com/" target="_blank">
+              <span class="grid-box-icon"></span>
+              <h3 class="grid-box-title">LocoMotive Labs</h3>
+              <span class="grid-box-catg"><img src="img/sector/education.png"/></span>
+            </a>
+          </li>
+
+          <!-- <li></li> -->
+
+        </ul>
+      </div>
+
+
+
+    
+
+
+</div>
+
+
+<!-- footer-->
+<footer id="contact">
+            <div class="col-md-4"></div>
+            <div class="col-md-1">
+                <a href="#"><img src="img/d3logo_white.png"width="100px"></a>
+            </div>
+            <div class="col-md-7" id="copyright">Copyright© 2011-2014 by D3. All rights reserved.</div>
+</footer>
+
+
+
+
+
+       
+
+
+<!-- script link-->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    
+
+
+</body>
+</html>
+
+
+
+

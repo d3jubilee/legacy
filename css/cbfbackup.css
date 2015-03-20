@@ -1,0 +1,193 @@
+.cbp-af-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fefefe;
+  z-index: 10000;
+  /*height: 230px;*/
+  height:160px;
+  /*overflow: hidden;*/
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  transition: height 0.3s;
+
+}
+
+.cbp-af-header .cbp-af-inner {
+  width: 90%;
+  max-width: 69em;
+  margin: 0 auto;
+  padding: 0 1.875em;
+}
+
+.cbp-af-header h1,
+.cbp-af-header nav {
+  display: inline-block;
+  position: relative;
+}
+
+ /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+.cbp-af-header h1,
+.cbp-af-header nav li a {
+  /*line-height: 230px;*/
+  line-height:180px;
+ 
+
+}
+.cbp-af-header nav li .sub-menu a{line-height: 30px;}
+.cbp-af-header h1 {
+  text-transform: uppercase;
+  color: #333;
+  letter-spacing: 4px;
+  font-size: 4em;
+  margin: 0;
+  float: left;
+}
+
+ nav {
+  float: right;
+}
+
+nav li{float:left;}
+
+nav a {
+  color: #515151;
+  font-weight: 700;
+  margin: 0 0 0 20px;
+  font-size: 1em;
+  text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+}
+
+
+.active {
+  color: #27ae60;
+  border-bottom: 2px solid #2ecc71;
+  padding-bottom: 5px;
+}
+.cbp-af-header nav a:hover {
+  color: #27ae60;
+  border-bottom: 2px solid #2ecc71;
+  padding-bottom: 5px;
+}
+
+
+/* Transitions and class for reduced height */
+.cbp-af-header h1,
+.cbp-af-header nav a {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.cbp-af-header.cbp-af-header-shrink {
+  height: 110px;
+    -webkit-box-shadow:0 2px 6px rgba(20,24,35,0.2); 
+  -moz-box-shadow:0 2px 6px rgba(20,24,35,0.2); 
+  box-shadow:0 2px 6px rgba(20,24,35,0.2);
+}
+
+.cbp-af-header.cbp-af-header-shrink h1,
+.cbp-af-header.cbp-af-header-shrink nav a {
+  line-height: 110px;
+}
+
+.cbp-af-header.cbp-af-header-shrink h1 {
+  font-size: 2em;
+}
+
+
+
+ul#menu, ul#menu ul.sub-menu {
+    padding:0;
+    margin: 0;
+}
+
+ul#menu li {
+    position: relative;
+}
+
+.cbp-af-header-shrink ul#menu li ul.sub-menu{top:62px;}
+/*sub menu*/
+ul#menu li ul.sub-menu {
+
+    display:none;
+    position: absolute;
+    /*position: relative;*/
+    top: 97px;
+    left: 0;
+    width: 132px;
+    padding:7px 0 20px 0 ;
+      -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: rgba(51,51,51,0.8);
+  border-radius: 8px;
+}
+ul#menu li:hover ul.sub-menu {
+    display:block;
+}
+
+ul.sub-menu a{color:white;font-weight: 400;}
+
+
+
+
+
+
+/* Example Media Queries */
+@media screen and (max-width: 55em) {
+
+  .cbp-af-header .cbp-af-inner {
+    width: 100%;
+  }
+
+  .cbp-af-header h1,
+  .cbp-af-header nav {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+  }
+
+  .cbp-af-header h1,
+  .cbp-af-header nav a {
+    line-height: 30px;
+  }
+
+  .cbp-af-header nav a {
+    margin: 0 10px;
+  }
+
+  .cbp-af-header.cbp-af-header-shrink h1,
+  .cbp-af-header.cbp-af-header-shrink nav a {
+    line-height: 45px;
+  }
+
+  .cbp-af-header.cbp-af-header-shrink h1 {
+    font-size: 2em;
+  }
+
+  .cbp-af-header.cbp-af-header-shrink nav a {
+    font-size: 1em;
+  }
+
+.cbp-af-header nav li a{line-height: 70px;margin-left: 100px;}
+.cbp-af-header .sub-menu li a{margin-left:20px; }
+ul#menu li ul.sub-menu{top:58px; left: 74px;}
+}
+
+@media screen and (max-width: 32.25em) {
+  .cbp-af-header nav a {
+    font-size: 1em;
+  }
+
+}
+
+@media screen and (max-width: 24em) {
+  .cbp-af-header nav a,
+  .cbp-af-header.cbp-af-header-shrink nav a {
+    line-height: 1;
+  }
+}
+

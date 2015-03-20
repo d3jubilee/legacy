@@ -1,0 +1,154 @@
+.card img{
+	border-radius:10px;
+	-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2)
+	-moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+	-ms-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+
+	-webkit-transition: all .2s ease-in-out; 
+}
+
+.card img:hover{
+
+	-moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  filter: alpha(opacity=50);
+  -webkit-transition: opacity 0.8s;
+  -moz-transition: opacity 0.8s;
+  -o-transition: opacity 0.8s;
+  transition: opacity 0.8s;
+}
+
+.boxgrid{
+	border-right:1px solid #e3e3e3;
+
+
+}
+.boxgrid img{width:70%;}
+
+.section-title{text-align:center;font-weight: 400;}
+#title,#sub-title{margin:10px 0 30px 0;text-align:center;}
+
+#title{font-size:28px;line-height: 39px;}
+#sub-title{font-size:25px;line-height: 28px;}
+#section-title{font-size:22px;line-height: 28px;}
+#text{font-size:18px; line-height: 28px;}
+.section-title,#title,#sub-title,#portfolio-title,#name,#text,#value div{font-family: "Monda",Helvetica, Arial, sans-serif;}
+
+
+#name{font-size:20px;  color: #2c3e50;}
+#position{font-size:14px;}
+
+
+.yellow-bg{background-color:rgb(241, 196, 0);}
+.blue-bg{background:rgb(39, 164, 219);}
+.red-bg{background-color:#d35400;}
+
+.flat-yellow{
+    text-shadow: rgb(217, 176, 0) 1px 1px,
+    rgb(217, 176, 0) 2px 2px,
+    rgb(217, 176, 0) 3px 3px,
+    rgb(217, 176, 0) 4px 4px,
+    rgb(217, 176, 0) 5px 5px,
+    rgb(217, 176, 0) 6px 6px,
+    rgb(217, 176, 0) 7px 7px,
+    rgb(217, 176, 0) 8px 8px,
+    rgb(217, 176, 0) 9px 9px,
+    rgb(217, 176, 0) 10px 10px,
+    rgb(217, 176, 0) 11px 11px,
+    rgb(217, 176, 0) 12px 12px,
+    rgb(218, 177, 0) 13px 13px,
+    rgb(219, 178, 0) 14px 14px,
+    rgb(221, 179, 0) 15px 15px,
+    rgb(222, 180, 0) 16px 16px,
+    rgb(223, 181, 0) 17px 17px,
+    rgb(225, 182, 0) 18px 18px,
+    rgb(226, 183, 0) 19px 19px,
+    rgb(227, 184, 0) 20px 20px,
+    rgb(229, 186, 0) 21px 21px,
+    rgb(230, 187, 0) 22px 22px,
+    rgb(231, 188, 0) 23px 23px,
+    rgb(233, 189, 0) 24px 24px,
+    rgb(234, 190, 0) 25px 25px,
+    rgb(235, 191, 0) 26px 26px,
+    rgb(237, 192, 0) 27px 27px,
+    rgb(238, 193, 0) 28px 28px,
+    rgb(239, 194, 0) 29px 29px,
+    rgb(241, 196, 0) 30px 30px;
+
+
+
+}
+.flat-red{
+    text-shadow: rgb(190, 76, 0) 1px 1px,
+    rgb(190, 76, 0) 2px 2px,
+    rgb(190, 76, 0) 3px 3px,
+    rgb(190, 76, 0) 4px 4px,
+    rgb(190, 76, 0) 5px 5px,
+    rgb(190, 76, 0) 6px 6px,
+    rgb(190, 76, 0) 7px 7px,
+    rgb(190, 76, 0) 8px 8px,
+    rgb(190, 76, 0) 9px 9px,
+    rgb(190, 76, 0) 10px 10px,
+    rgb(190, 76, 0) 11px 11px,
+    rgb(190, 76, 0) 12px 12px,
+    rgb(191, 76, 0) 13px 13px,
+    rgb(192, 76, 0) 14px 14px,
+    rgb(193, 77, 0) 15px 15px,
+    rgb(194, 77, 0) 16px 16px,
+    rgb(195, 78, 0) 17px 17px,
+    rgb(197, 78, 0) 18px 18px,
+    rgb(198, 79, 0) 19px 19px,
+    rgb(199, 79, 0) 20px 20px,
+    rgb(200, 80, 0) 21px 21px,
+    rgb(201, 80, 0) 22px 22px,
+    rgb(202, 80, 0) 23px 23px,
+    rgb(204, 81, 0) 24px 24px,
+    rgb(205, 81, 0) 25px 25px,
+    rgb(206, 82, 0) 26px 26px,
+    rgb(207, 82, 0) 27px 27px,
+    rgb(208, 83, 0) 28px 28px,
+    rgb(209, 83, 0) 29px 29px,
+    rgb(211, 84, 0) 30px 30px;
+}
+
+.flat-blue{
+	text-shadow: rgb(35, 148, 197) 1px 1px,
+    rgb(35, 148, 197) 2px 2px,
+    rgb(35, 148, 197) 3px 3px,
+    rgb(35, 148, 197) 4px 4px,
+    rgb(35, 148, 197) 5px 5px,
+    rgb(35, 148, 197) 6px 6px,
+    rgb(35, 148, 197) 7px 7px,
+    rgb(35, 148, 197) 8px 8px,
+    rgb(35, 148, 197) 9px 9px,
+    rgb(35, 148, 197) 10px 10px,
+    rgb(35, 148, 197) 11px 11px,
+    rgb(35, 148, 197) 12px 12px,
+    rgb(35, 148, 198) 13px 13px,
+    rgb(35, 149, 199) 14px 14px,
+    rgb(35, 150, 200) 15px 15px,
+    rgb(35, 151, 201) 16px 16px,
+    rgb(36, 152, 203) 17px 17px,
+    rgb(36, 153, 204) 18px 18px,
+    rgb(36, 154, 205) 19px 19px,
+    rgb(36, 155, 206) 20px 20px,
+    rgb(37, 156, 208) 21px 21px,
+    rgb(37, 156, 209) 22px 22px,
+    rgb(37, 157, 210) 23px 23px,
+    rgb(37, 158, 211) 24px 24px,
+    rgb(37, 159, 212) 25px 25px,
+    rgb(38, 160, 214) 26px 26px,
+    rgb(38, 161, 215) 27px 27px,
+    rgb(38, 162, 216) 28px 28px,
+    rgb(38, 163, 217) 29px 29px,
+    rgb(39, 164, 219) 30px 30px;
+}
+
+.white{color:white;}
+
+

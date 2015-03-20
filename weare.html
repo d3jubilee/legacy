@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="eng" class="no-js lt-ie9 lt-ie8 lt-ie7"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>D3 | Redefine Growth</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+        <link rel="shortcut icon" href="../img/favicon.ico"> 
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script src="js/support/modernizr.custom.js"></script>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css" media="Screen">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('require', 'displayfeatures');
+  ga('create', 'UA-49627023-1', 'd3jubilee.com');
+  ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="img/d3logolong_white.png" width="220"/></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav" id="menu">
+                <li><a href="weare.html">Who we are</a></li>
+                 <li><a href="d3plus.html">D3<span id="plus">+</span></a></li>
+                <li><a href="apply.html">Impact Engine</a></li>
+                <li><a href="impact.html">Impact Map</a></li>
+                <!-- <li><a href="#">Blog</a></li> -->
+          </ul>
+        </div>
+      </div>
+</div>
+    
+
+<div class="hero" id="team">
+    <div class="main">
+        <section class="white brand">
+         <h1>TEAM<span class="thin-font"> Here we are</span></h1>
+         <p>D3 has multi-located offices in Seoul, Korea and Palo Alto, USA. Our team work with international and domestic social entrepreneur and investor to pursue "making better world".</p>
+          
+        </section>
+      </div>
+    </div>
+
+    
+
+  <!--*********************** 
+        Who we are  
+  ************************ -->
+<!-- <div class="row" id="team"></div> -->
+
+<div class="container-fluid" id="team_bg">
+
+  <div class="row" id="team_profile">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-12" id="title">Team</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/team/doug.png">
+              
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Doug Duckjun LEE </h5>
+              <h6 id="position">CEO | USA &amp; Korea</h6>
+            <p>Doug is an angel investor in Korea and the San Francisco bay area.  He moved to the space of impact investment in 2010. He is a former CFO of Gmarket (acquired by eBay). Prior to Gmarket, he was an investment banker with Schroders, Citigroup and Credit Suisse. He holds a master's degree in Accounting and Finance from London School of Economics and a bachelor's degree from Seoul National University.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <img src="img/team/jaehyun.png">
+            
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Jaehyun Kim</h5>
+            <h6 id="position">Managing Partner | Korea</h6>
+            <p>Mr. Kim started his own business in 2002, and has been managed 'Crevisse Partners' since 2006. He is also the CEO of Kyowon Creatives. He holds a bachelor’s degree of Business Management from Seoul National University.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <img src="img/team/q.png">
+            
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Namkyu Ryoo </h5>
+            <h6 id="position">Design Partner | Korea</h6>
+            <p>Namkyu is an entrepreneur and Full Stack designer which cover from UX, UI and Web development. He is mainly focused on "how human can intuitvely interact with data and information in the era of complexity" He tried to find an intersection between 3-year study at engineering world and design study at the the School of Art Institute of Chicago. He is bootstraping his own startup in healthcare industry. He also worked on mobile/web product as visual/interaction designer for Morningstar around 3 years.</p>
+          </div>
+        </div>
+
+
+<div class="row">
+          <div class="col-md-3">
+            <img src="img/team/young.png">
+            
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Jiyoung Lee</h5>
+            <h6 id="position">Principal | USA</h6>
+            <p>Jiyoung's professional ambitions have always been to strike a balance between social responsibility and business profitability. She believes impact investment is an effective means for helping socially responsible businesses thrive, making our world a better place. Prior to joining D3, Jiyoung founded NADOO, a lifestyle sharing platform with e-commerce engine. Prior to NADOO, she worked as analytics specialist at ZeroDesktop, a San Mateo based cloud technology startup. She has also worked in fund sales and securities structuring roles at Goldman Sachs Asset Management in Korea and Merrill Lynch in Hong Kong. She started her career at Kookmin Bank. Jiyoung received her MBA from the University of Chicago Booth School of Business and a bachelor's degree from Korea University. She is also a CFA charterholder.</p>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-3">
+            <img src="img/team/dong.png">
+            
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Haedong Shin </h5>
+            <h6 id="position">Analyst | Korea</h6>
+            <p>Haedong lives by the saying, “If you don’t do anything, nothing’s going to happen.”  He gained a passion for social issues through a volunteer mentoring program, and is fascinated by impact investment – how capital markets can be used to benefit society.  An all-round sportsman, Haedong loves football and table tennis.   He holds a bachelor’s dgree in Economics from the Konkuk University.</p>
+          </div>
+        </div>
+
+         
+
+         <div class="row">
+          <div class="col-md-3">
+            <img src="img/team/kyung.png">
+            
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Jun gyeong Kyung</h5>
+            <h6 id="position">Analyst | Korea</h6>
+            <p>Jungyeong was a college student majoring mechanical system engineering and business administration. Prior to D3, he was scheduled to be a researcher for car development at Ssangyong motor. But he decided to be with D3 to look for experiences about social venture - how is social ventures  built up by impact investment. He took part in volunteer program - Habitat at Indonesia and Philippines. He gained hope of making impact through the volunteer programs. he works saying 'If plan A didn't work, there are 100 more options'. </p>
+          </div>
+        </div>
+
+         <div class="row">
+          <div class="col-md-3">
+            <img src="img/team/yuri.png">
+           
+          </div>
+          <div class="col-md-9">
+             <h5 id="name">Yuri Son</h5>
+            <h6 id="position">Designer | Korea</h6>
+            <p>Yuri believes that doing the right thing is more important than doing the thing right. She joined D3Jubilee to learn what entrepreneurs do to make the world a better place. She enjoys observing how people behave and hopes to design things that inspire them.Yuri majored Product and User Experience Design from Korea University.</p>
+          </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+           
+</div> 
+
+<!-- footer-->
+<footer id="contact">
+            <div class="col-md-4">&nbsp;</div>
+            <div class="col-md-1">
+                <a href="#"><img src="img/d3logo_white.png"width="100px"></a>
+            </div>
+            <div class="col-md-7" id="copyright">Copyright© 2011-2014 by D3. All rights reserved.</div>
+</footer>
+
+
+
+
+
+       
+
+<!-- </div> -->
+<!-- script link-->
+<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/main.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="js/plugin/modal.js"></script>
+<script src="js/plugin/jquery.jcarousel.js"></script>
+<script src="js/plugin/jcarousel.simple.js"></script>
+<script src="js/plugin/classie.js"></script>
+<script src="js/plugin/vs-carsousel.js"></script>
+<script src="js/plugin/animated_head.js"></script>
+
+
+
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,203 @@
+
+/* General grid styles */
+.grid-box {
+	list-style: none;
+	padding: 0 0 50px 0;
+	margin: 0;
+}
+
+/* Clear floats */
+.grid-box:before, 
+.grid-box:after { 
+	content: " "; 
+	display: table; 
+}
+
+.grid-box:after { 
+	clear: both; 
+}
+
+/* grid item */
+.grid-box li {
+	width: 25%;
+	float: left;
+	height: 270px;
+	text-align: center;
+	border-top: 1px solid #ddd;
+}
+
+/* we are using a combination of borders and box shadows to control the grid lines */
+.grid-box li:nth-child(-n+4){
+	border-top: none;
+}
+
+.grid-box li:nth-child(4n-1),
+.grid-box li:nth-child(4n-2),
+.grid-box li:nth-child(4n-3)  {
+	box-shadow: 1px 0 0 #ddd;
+}
+
+/* anchor style */
+.grid-box li > a {
+	display: block;
+	height: 100%;
+	color: #27ae60;
+	-webkit-transition: background 0.4s;
+	-moz-transition: background 0.4s;
+	transition: background 0.4s;
+}
+
+/* the icon with pseudo class for icon font */
+.grid-box-icon {
+	padding: 30px 0 0 0;
+	display: block;
+	-webkit-transition: -webkit-transform 0.4s;
+	transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.grid-box-icon:before {
+	font-size: 14em;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* title element */
+.grid-box .grid-box-title {
+	margin: 20px 0 10px 0;
+	padding: 20px 0 0 0;
+	font-size: 1.4em;
+	position: relative;
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+	font-weight: 400;
+}
+
+.grid-box .grid-box-title:before {
+	content: '';
+	position: absolute;
+	background: #27ae60;
+	width: 160px;
+	height: 3px;
+	top: 0px;
+	left: 50%;
+	margin: -10px 0 0 -80px;
+	-webkit-transition: margin-top 0.4s; /* top or translate does not seem to work in Firefox */
+	-moz-transition: margin-top 0.4s;
+	transition: margin-top 0.4s;
+}
+
+.grid-box .grid-box-catg {
+	/*text-transform: uppercase;*/
+	display: inline-block;
+	font-size: 1em;
+	letter-spacing: 1px;
+	color: #fff;
+	-webkit-transform: translateY(10px);
+	-moz-transform: -moz-translateY(10px);
+	-ms-transform: -ms-translateY(10px);
+	transform: translateY(10px);
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	-webkit-transition: transform 0.3s, opacity 0.2s;
+}
+
+.grid-box li:hover .grid-box-catg,
+.touch .grid-box li .grid-box-catg {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+/* Hover styles */
+
+.grid-box li > a:hover {
+	background: #27ae60;
+	/*background:#85c79c;*/
+}
+
+.grid-box li > a:hover .grid-box-icon {
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.grid-box li > a:hover .grid-box-icon:before,
+.grid-box li > a:hover .grid-box-title {
+	color: #fff;
+}
+
+.grid-box li > a:hover .grid-box-title {
+	-webkit-transform: translateY(-30px);
+	-moz-transform: translateY(-30px);
+	-ms-transform: translateY(-30px);
+	transform: translateY(-30px);
+}
+
+.grid-box li > a:hover .grid-box-title:before {
+	background: #fff;
+	margin-top: 60px;
+}
+
+
+@media screen and (max-width: 62.75em) {
+	.grid-box li {
+		width: 50%;
+	}
+
+	/* reset the grid lines */
+	.grid-box li:nth-child(-n+3){
+		border-top: 1px solid #ddd;
+	}
+
+	.grid-box li:nth-child(3n-1),
+	.grid-box li:nth-child(3n-2) {
+		box-shadow: none;
+	}
+
+	.grid-box li:nth-child(-n+2){
+		border-top: none;
+	}
+
+	.grid-box li:nth-child(2n-1) {
+		box-shadow: 1px 0 0 #ddd;
+	}
+}
+
+@media screen and (max-width: 41.6em) { 
+	.grid-box li {
+		width: 100%;
+	}
+
+	.grid-box li:nth-child(-n+2){
+		border-top: 1px solid #ddd;
+	}
+
+	.grid-box li:nth-child(2n-1) {
+		box-shadow: none
+	}
+
+	.grid-box li:first-child {
+		border-top: none;
+	}
+}
+
+@media screen and (max-width: 25em) { 
+	.grid-box {
+		font-size: 80%;
+	}
+
+	.grid-box .grid-box-catg {
+		margin-top: 20px;
+	}
+}

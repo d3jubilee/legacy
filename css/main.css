@@ -1,0 +1,172 @@
+/* IMPORT ALL SCSS FILES*/
+/* 
+  RESET - ADAPTED FROM MEYER RESET
+  URL - http://meyerweb.com/eric/tools/css/reset/
+  LICENSE - PUBLIC DOMAIN
+*/
+/* RESET
+----------------------------------------------------------------------------------------------------*/
+a, abbr, acronym, address, applet, article, aside, audio,
+b, big, blockquote, body, caption, canvas, center, cite, code,
+dd, del, details, dfn, dialog, div, dl, dt, em, embed,
+fieldset, figcaption, figure, form, footer,
+header, hgroup, h1, h2, h3, h4, h5, h6, html,
+i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav,
+object, ol, output, p, pre, q, ruby,
+s, samp, section, main, small, span, strike, strong, sub, summary, sup,
+tt, table, tbody, textarea, tfoot, thead, time, tr, th, td,
+u, ul, var, video {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+  white-space: normal;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section, main {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+
+
+
+
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*="language-"] {
+  color: white;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  white-space: pre;
+  overflow: auto;
+  width: auto;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+::selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none; } }
+/* Code blocks */
+pre[class*="language-"] {
+  overflow: auto; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em; }
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #666;
+  font-style: italic; }
+
+.token.punctuation {
+  color: #ffc66d; }
+
+.language-css .token.selector,
+.language-css .token.punctuation {
+  color: white; }
+
+.namespace {
+  opacity: .7; }
+
+.token.tag,
+.token.boolean,
+.token.number {
+  color: #ffc66d; }
+
+.token.property,
+.token.selector,
+.token.attr-name,
+.token.string {
+  color: #cc7832; }
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #6e9cbe; }
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #a5c261; }
+
+.token.regex,
+.token.important {
+  color: #e90; }
+
+.token.important {
+  font-weight: bold; }
+
+.token.entity {
+  cursor: help; }
+
+.share .btn {
+  display: block;
+  float: left;
+  padding: 1px 5px 1px 3px;
+  margin-right: 5px;
+  font-size: 0.85714285714286em;
+  /* 12/14 */
+  color: #333333;
+  background: whitesmoke;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-shadow: white 0px 1px 0px inset; }
+.share .btn:hover {
+  background: #f0f0f0;
+  border: 1px solid #bfbfbf; }
+.share .btn .icon {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin: 1px 7px 0 0;
+  background: url("../images/sprite-share.svg") no-repeat;
+  background-size: 125px 25px; }
+.share .btn.facebook .icon {
+  background-position: -21px 0; }
+.share .btn.google .icon {
+  background-position: -75px 1px; }
+.share .btn.linkedin .icon {
+  background-position: -100px 0; }
+.share .btn.pinterest .icon {
+  background-position: -50px 0; }
+.share .btn.twitter .icon {
+  background-position: 0 0; }

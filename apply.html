@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="eng" class="no-js lt-ie9 lt-ie8 lt-ie7"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>D3 | Redefine Growth</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+        <link rel="shortcut icon" href="../img/favicon.ico"> 
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script src="js/support/modernizr.custom.js"></script>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="css/style.css" media="Screen">
+
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('require', 'displayfeatures');
+  ga('create', 'UA-49627023-1', 'd3jubilee.com');
+  ga('send', 'pageview');
+  
+
+</script>
+
+    </head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="img/d3logolong_white.png" width="220"/></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav" id="menu">
+                <li><a href="weare.html">Who we are</a></li>
+                <li><a href="d3plus.html">D3<span id="plus">+</span></a></li>
+                <li><a href="apply.html">Impact Engine</a></li>
+                <li><a href="impact.html">Impact Map</a></li>
+                <!-- <li><a href="#">Blog</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  <div class="container-fluid" id="impact-engine">
+    <div class="row">
+      <!-- <div class="col-md-1"></div> -->
+      <div class="col-md-12">
+          <img src="img/rocket.png"/>
+      </div>
+      <!-- <div class="col-md-1"></div> -->
+    </div>
+             
+    <div class="row" id="engine-header">
+      <div class="col-md-3 col-sm-3"></div>
+      <div class="col-md-6 col-sm-6">
+          <img src="img/enginelogo.png"/>
+          <p>혁신적 기술벤처와 함께 지속가능한 세상을 만드는<br> 글로벌 엑셀러레이터 프로그램 </p>
+      </div>
+       <div class="col-md-3 col-sm-3"></div>
+    </div>
+
+
+    <div class="row" id="applybtn">
+      <div class="col-sm-4 col-md-4"></div>
+      <div class="col-sm-4 col-md-4">
+        <!-- <a href="#" target="_blank"> --><button type="button" class="btn btn-warning btn-block btn-large">지원 마감되었습니다 </button><!-- </a> --></div>
+      <div class="col-sm-4 col-md-4"></div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <img src="img/programtext.png"/>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+
+
+    <div class="row" id="program">
+      <div class="col-md-3 col-sm-3">
+         <div class="icon d3-users-3"></div>
+         <h3>전문적 멘토단</h3>
+         <p>G마켓, 네이버, 게임빌, 딜라이트보청기 등 국내 성공적인 창업 기업가들과 국내 및 실리콘밸리 VC, 헬스케어 및 스마트교육 등 섹터 전문가 멘토가 함께합니다. 
+</p>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <div class="icon d3-chat"></div>
+        <h3>실질적인 커리큘럼</h3>
+        <p>사회적 임팩트가 결합된 디자인, 브랜딩, 마케팅, 비즈니스모델, 타겟 시장 전략, 펀딩전략 등 풍부한 실제 케이스를 바탕으로 기업가가 필요한 A to Z를 제공합니다.
+</p>
+      </div>
+      <div class="col-md-3 col-sm-3">
+        <div class="icon d3-globe"></div>
+        <h3>글로벌 네트워크</h3>
+        <p>국내와 실리콘밸리 멘토단을 보유하고 있으며 하버드&맥킨지 우수 엑셀러레이팅 프로그램으로 선정된 Village capital, GSBI등 섹터 전문의 해외 임팩트 엑셀러레이터들과 협력하고 있습니다. </p>
+      </div>
+      
+      <div class="col-md-3 col-sm-3">
+        <div class="icon d3-dollar"></div>
+        <h3>투자 / 지원금 </h3>
+        <p>D3가 선정 및 투자를 리더하고 임팩트엔진파트너가 선택적으로 공동투자합니다. 데모데이 및 D3+ 투자클럽에서의 피칭을 통해 후속투자를 유치할 수 있습니다. 
+</p>
+      </div>
+    </div>
+
+
+     <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+       <img src="img/applytext.png"/>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+<!-- 
+    <div class="row" id="apply">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        
+        <p>1기 임팩트 엔진 모집은 마감되었습니다. 지원해주시고 관심가져주신 수많은 기업들에게 감사드립니다. 2기 모집에 대한 공고는 <a href="https://www.facebook.com/d3jubilee" target="_blank">D3 페이스북 페이지</a>에서 수시로 공고될 예정입니다.  D3 페이스북 페이지를 구독하시면 임팩트 엔진에 대한 다양한 뉴스가 제공될 예정입니다.</p>
+   
+      </div>
+      <div class="col-md-2"></div>
+    </div> -->
+
+
+
+
+
+    <div class="row" id="apply">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <h3> 7/31까지 서류 지원 (수시 선정)  </h3>
+          <h4>서류 심사후 선별 인터뷰 진행하며 최종 7-10개 기업 선정 예정.<br>* 참여팀 선정 완료시 조기 마감될 수 있습니다.  </h4>
+        </div>
+
+       <div class="row spacing-70" id="engine-sector">
+          <h3>관심섹터</h3>
+          <div class="row">
+            <div class="col-md-3 col-s-3"></div>
+            <div class="col-md-2 col-s-2">
+              <img src="img/sector/healthcare_white.png"/>
+              <h4>디지털 헬스케어</h4>
+            </div>
+
+            <div class="col-md-2 col-s-2">
+              <img src="img/sector/sharing_white.png"/>
+              <h4>공유경제</h4>
+            </div>
+
+            <div class="col-md-2 col-s-2">
+              <img src="img/sector/energy_white.png"/>
+              <h4>환경/클린테크</h4>
+            </div>
+
+            <!-- <div class="col-md-2 col-sm-2">
+              <img src="img/sector/education_white.png"/>
+              <h4></h4>
+            </div> -->
+            <div class="col-md-3 col-sm-3"></div>
+          </div>
+         <!--  <p>디지털 헬스케어 | 환경, 공유 경제, 클린테크 | 스마트 교육 | 기타 사회적 가치가 높은 영역</p> -->
+        </div>
+
+
+
+       <div class="row spacing-70">
+          <div class="col-md-2"></div>
+          <div class="col-md-8"><h3>대상</h3><p>아이디어(Ideation) 단계를 지나 제품 및 서비스를 보유한 성장 단계에 있는 벤처 혹은 해외 진출을 계획하는 벤처를 대상으로 진행되는 프로그램입니다. 여성 창업가가 있는 팀은 가산점을 부여합니다. 단, 이스라엘식 기술 창업(글로벌 시장형 R&D) 및 선도벤처 연계창업 지원 사업 그리고 SW 전문 창업 기획사외, 청년창업사관학교(중소기업공단)에 참여 중인 스타트업은 대상에서 제외합니다.<p></div>
+          <div class="col-md-2"></div>
+        </div>
+         
+
+        <div class="row spacing-70">
+          <div class="col-md-2"></div>
+          <div class="col-md-8"><h3>참가특전</h3><p>참가 기업에게 선별적으로 연구개발 및 해외IR 위한 일정금액 지원 <p></div>
+          <div class="col-md-2"></div>
+        </div>
+
+
+        <div class="row spacing-70">
+          <!-- <div class="col-md-2"></div> -->
+          <div class="col-md-12"><h3>일정</h3>
+          <img src="img/schedule.png"/></div>
+          <!-- <div class="col-md-2"></div> -->
+        </div>
+
+
+
+
+   
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+
+
+
+
+
+<!-- 
+    <div class="row" id="applybtn">
+      <div class="col-sm-4 col-md-4"></div>
+      <div class="col-sm-4 col-md-4">
+        <a href="applyform.html" target="_blank"><button type="button" class="btn btn-warning btn-block btn-large">지원하기</button></a></div>
+      <div class="col-sm-4 col-md-4"></div>
+
+    </div> -->
+
+
+   <!--  <div class="row top-40">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                        <img src="img/team/richard.png"/>
+                        <h5  id="name">Richard Biggs</h5>
+                        <h6  id="position">Managing Director</h6>
+                </div>
+                <div class="col-md-7">
+                      <p>Prior to D3, Richard founded Firstfruits, a premium F&B company, manufacturing freshly-squeezed juice and distributing it nationwide in Korea through intl retail channels such as Starbucks and Costco. He has 6 years of experience at ABN-AMRO, Ernst & Young, and Peregrine Securities in the fields of equity research and corporate advisory.Richard holds a bachelor’s degree in Economics from the London School of Economics.</p>
+                </div>
+                <div class="col-md-1"></div>
+          </div> -->
+
+
+
+ </div>
+    <!-- <div class="row" id="partner">
+      <div class="col-md-12">
+        <img src="img/partner.png"/>
+      </div>
+    </div> -->
+
+    <section class="row">
+      <div class="col-md-12">
+        <img src="img/shadow_divider.png"/>
+
+      </div>
+    </section>
+
+    <div class="container-fluid" id="partner-footer">
+      <div class="row profile" id="mentorlist">
+          <!-- <div class="col-md-12"> -->
+        <h3>Mentor</h3>
+        <div class="col-sm-12 col-md-12" id="mentor-vision">
+            <div class="col-md-3"></div>
+            <div class="col-md-6" >
+            <p>D3의 멘토는 기업가들이 나아가야할 길을 이미 밟아본 경험자들이며 그에 따른 전문성을 갖추고 있습니다. 열린 사고로 기업의 미션을 존중하고 격려합니다. 솔직하고 겸손한 태도로 기업가와 교류하며, 성공한 경험뿐 아니라 실패까지도 기업가와 공유해 실질적인 길잡이 역할이 되어주고 건설적인 피드백을 나눕니다. </p></div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <div class="col-sm-12 col-md-12">
+          <ul>
+              <li class="col-md-3 col-sm-3"><img src="img/mentor/hyunseok.jpg" data-toggle="modal" data-target="#hyunseok"><p>강현석</p><div>Counsyl, Medical Lab Director</div></li>
+              <li class="col-md-3 col-sm-3"><img src="img/mentor/seojoon.jpg" data-toggle="modal" data-target="#seojoon"><p>김서준</p><div>KnowRe, 부대표 </div></li>
+              <li class="col-md-3 col-sm-3"><img src="img/mentor/junghyun.jpg" data-toggle="modal" data-target="#junghyun"><p>김정현 </p><div>우주, 딜라이트 CEO</div></li>
+              <li class="col-md-3 col-sm-3"><img src="img/mentor/dongmin.jpg" data-toggle="modal" data-target="#dongmin"><p>김동민</p><div>INSPIRE.D, Managing Director</div></li>
+
+            </ul>
+        </div>
+
+        <div class="col-sm-12 col-md-12">
+            <ul>
+              <li class="col-md-3 col-sm-3"><img src="img/mentor/sungtae.jpg" data-toggle="modal" data-target="#sungtae">
+                <p>안성태</p><div>KAIST 초빙교수/글로벌창업연계실 실장</div></li>
+              <li class="col-md-3 col-sm-3"><img src="img/mentor/jaeho.jpg" data-toggle="modal" data-target="#jaeho"><p>이재호</p><div>(전) G마켓 기술 연구소장</div></li>
+              <li class="col-md-3 col-sm-3"><img src="img/mentor/manhee.jpg" data-toggle="modal" data-target="#manhee"><p>이만희</p><div>(주)누리봄, CTO</div></li>
+              <li class="col-md-3 col-sm-3"><img src="img/mentor/mina.jpg" data-toggle="modal" data-target="#mina"><p>이미나</p><div>5Rocks, 홍보이사</div></li>
+              
+              
+          </ul>
+        </div>
+
+        <div class="col-sm-12 col-md-12">
+          <ul>
+            <li class="col-md-3 col-sm-3"><img src="img/mentor/sooin.jpg" data-toggle="modal" data-target="#sooin"><p>이수인</p><div>LocoMotive Labs, CEO</div></li>
+            <li class="col-md-3 col-sm-3"><img src="img/mentor/seunghwan.jpg" data-toggle="modal" data-target="#seunghwan"><p>오승환</p><div>네이버 공동창업자</div></li>
+            <li class="col-md-3 col-sm-3"><img src="img/mentor/phill.jpg" data-toggle="modal" data-target="#phill"><p>윤필구</p><div>Big Basin Capital, Partner</div></li>
+
+            <li class="col-md-3 col-sm-3"><img src="img/mentor/sungmoon.jpg" data-toggle="modal" data-target="#sungmoon"><p>조성문</p><div>Oracle, Principal Product Manager</div></li>
+
+           
+            
+          </ul>
+        </div>
+
+        <div class="col-sm-12 col-md-12">
+          <ul>
+            <li class="col-md-3 col-sm-3"><img src="img/mentor/nari.jpg"data-toggle="modal" data-target="#nari"><p>최나리</p><div>XSeed Capital, Principal</div></li>
+
+             <li class="col-md-3 col-sm-3"><img src="img/mentor/yoonsup.jpg"data-toggle="modal" data-target="#yoonsup"><p>최윤섭</p><div>KT 융합기술원, 팀장</div></li>
+
+             <li class="col-md-3 col-sm-3"><img src="img/mentor/garett.jpg"data-toggle="modal" data-target="#garett"><p>Garett Wiley</p><div>798 Group, Managing Director</div></li>
+            
+
+          <li class="col-md-3 col-sm-3"><img src="img/mentor/tim.jpg"data-toggle="modal" data-target="#tim"><p>Tim Chae</p><div>500 Startup, EIR</div></li>
+
+          <li class="col-md-3 col-sm-3"><img src="img/mentor/wyp.jpg"data-toggle="modal" data-target="#wyp"><p>박원영 </p><div>Lawrence Berkeley National Lab., Senior Research Associate</div></li>
+  <!-- 
+            <li class="col-md-3 col-sm-3"><img src="img/mentor/yoonsup.jpg"><p>최윤섭</p><div>KT 융합기술원, 팀장</div></li>
+
+            <li class="col-md-3 col-sm-3"><img src="img/mentor/jaehyung.jpg"><p>허재형</p><div>루트임팩트, COO</div></li> -->
+          </ul>
+        </div>
+
+        </div>
+
+      <!-- </div> -->
+
+ <section class="row">
+      <div class="col-md-12">
+        <img src="img/shadow_divider.png"/>
+
+      </div>
+    </section>
+
+
+
+      <div class="row" id="partner">
+            <div class="col-md-4 col-sm-4"></div>
+            <div class="col-md-4 col-sm-4">Partners</div>
+            <div class="col-md-4 col-sm-4"></div>
+      </div>
+      <div class="row" id="partner-logo">
+            <div class="col-md-3 col-sm-3"><a href="http://rootimpact.or.kr/ko/" target="_blank">
+              <img src="img/rootimpact.png"/></a></div>
+            <div class="col-md-3 col-sm-3"><a href="http://www.crevisse.com/" target="_blank">
+              <img src="img/crevisse.png"/></a></div>
+            <div class="col-md-3 col-sm-3"><a href="http://www.skhappiness.org/" target="_blank">
+              <img src="img/happy.png"/></a></div>
+            <div class="col-md-3 col-sm-3"><a href="http://www.hamkke.org" target="_blank">
+              <img src="img/hamkke.png"/></a></div>
+      </div>
+
+      <section class="row">
+      <div class="col-md-12">
+        <img src="img/shadow_divider.png"/>
+
+      </div>
+    </section>
+
+      <div class="row" id="partner">
+            <div class="col-md-4 col-sm-4"></div>
+            <div class="col-md-4 col-sm-4">Network</div>
+            <div class="col-md-4 col-sm-4"></div>
+      </div>
+
+       <div class="row sm" id="partner-logo">
+            <div class="col-md-3 col-sm-3"><a href="http://www.toniic.com/" target="_blank">
+              <img src="img/toniic.png"/></a></div>
+            <div class="col-md-3 col-sm-3"><a href="http://www.vilcap.com/" target="_blank">
+              <img src="img/village.png"/></a></div>
+            <div class="col-md-3 col-sm-3"><a href="http://www.scu.edu/socialbenefit/entrepreneurship/gsbi/Silicon-Valley.cfm" target="_blank">
+              <img src="img/gsbi.png"/></a></div>
+             <div class="col-md-3 col-sm-3"><a href="http://www.impacthub.net/" target="_blank">
+              <img src="img/impacthub_blk.png"/></a></div>
+      </div>
+
+
+<section class="row">
+      <div class="col-md-12">
+        <img src="img/shadow_divider.png"/>
+
+      </div>
+    </section>
+
+
+       <div class="row" id="partner">
+            <div class="col-md-4 col-sm-4"></div>
+            <div class="col-md-4 col-sm-4">Sponsors</div>
+            <div class="col-md-4 col-sm-4"></div>
+      </div>
+
+       <div class="row sm" id="partner-logo">
+            <div class="col-md-4 col-sm-4"><a href="http://www.msip.go.kr/" target="_blank">
+              <img src="img/mirae.png"/></a></div>
+            <div class="col-md-4 col-sm-4"><a href="http://www.nipa.kr/" target="_blank">
+              <img src="img/nipa.png"/></a></div>
+            <div class="col-md-4 col-sm-4"><a href="http://www.dcamp.kr/" target="_blank">
+              <img src="img/camp.png"/></a></div>
+      </div>
+
+     
+    </div>
+
+
+<!-- modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="hyunseok" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">강현석</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>Counsyl, Inc</p>
+        <b>Position</b><p>Medical and Laboratory Director</p> 
+        <b>Expertise</b><p>유전자 진단, 정보의학</p>
+        <b>Bio</b>
+        <p>Dr. Kang is a genomic pathologist who trained at Washington University and the University of Pittsburgh. He received his medical degree from Seoul National University, and an MS in Biomedical Informatics from Stanford. His goal is to make genomic testing accessible and applicable so that people can use it to learn vital information about their bodies. He enjoys hiking and road biking in his spare time.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="seojoon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">김서준</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>KnowRe</p>
+        <b>Position</b><p>부대표, CPO</p> 
+        <b>Expertise</b><p>프로덕트 개발, 사용자경험 디자인, 글로벌 진출, 디지털 교육</p>
+        <b>Bio</b>
+        <p>김서준은 맞춤형 수학교육 플랫폼 노리(KnowRe)의 공동창업자이다. 부대표 및 제품총괄책임자(Chief Product Officer)를 맡아 서비스의 사용자 경험을 디자인하고 있다.<br>'한 명의 교사가 여러 명의 학생들을 가르칠 때 발생하는 집합식 교육의 한계를 어떻게 효과적으로 개선할 수 있을까?’에 대한 질문이 노리를 구상한 계기가 되었다. 단위 지식 수준으로 세밀하게 학생들의 성취도를 분석한 뒤, 이를 바탕으로 맞춤형 복습 프로그램을 제공하고, 게임화된 디자인을 통해 즐겁게 학습에 몰입할 수 있도록 플랫폼을 발전시켜 나가고 있다.<br>서울과학고등학교와 포스텍(POSTECH) 컴퓨터공학과에서 공부했으며, 썬마이크로시스템즈(Sun Microsystems)와 웹케시(Webcash), 모젯(Mozzet) 등에서 IT 서비스 기획과 개발을 경험했다. 베스트셀러 학습서 <수학의 눈을 찾아라>의 저자이며, 학생들과 학부모들을 대상으로 효과적인 수학공부 방법론에 대하여 수차례 강연한 바 있다. 세탁기의 발명이 여성의 사회 참여를 이끌어내었듯 인류의 라이프스타일을 바람직하면서도 비가역적으로 변화시키는 제품을 만들고자 노력하고 있다.<br>노리는 구글과 방송통신위원회가 주최한 ‘글로벌 K-스타트업 2012’에서 대상을 수상하였고, 뉴욕시 교육청이 주최한 교육앱 공모전 ‘NYC Schools Gap App Challenge’에서 우승하였으며, <패스트 컴퍼니>가 선정한 “세계에서 가장 혁신적인 교육회사 Top 10”에 선정되는 등 혁신적인 교육기술 스타트업으로 인정받고 있다. 2014년부터 미국과 한국에서 정식으로 서비스를 런칭하였다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="junghyun" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">김정현</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>WOOZOO,딜라이트</p>
+        <b>Position</b><p>공동창업자</p> 
+        <b>Expertise</b><p>기업가 정신, 사회적기업가 정신, 공유경제, 판로개척</p>
+        <b>Bio</b>
+        <p>국내의 대표적 사회적기업 딜라이트보청기의 창업자이자 대표이사이다. 딜라이트 창업 및 Exit 후 대학생 쉐어하우스 WOOZOO를 공동창업했으며 현재 이사직을 맡고 있다. Harvard University, 서울대학교, KAIST 등에서 대학생, 사회 초년생, 예비창업자를 대상으로 강연 및 멘토링을 했다. Forbes 선정 올해의 벤처기업인상, 올해의 청년기업인상 지식경제부 장관상을 수상한바 있으며 딜라이트는 국내 최초 B Corp 인증 및 전국 소셜벤처 경연대회 대상을 받았다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="dongmin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">김동민</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>INSPIRE.D @CREVISSE</p>
+        <b>Position</b><p>Managing Director</p> 
+        <b>Expertise</b><p>마케팅, 브랜딩</p>
+        <b>Bio</b>
+        <p>“Be the change that you wish to see in the world.” - Mahatma Gandhi<br>
+          I make creative ideas for a better world and break boundaries for tangible results.
+          <br>
+
+          <ul>
+            <li><b>Awards</b></li>
+            <li>-Red Dot Award : Communication Design 2013 Winner</li>
+            <li>-iF Design Award : Advertising & Campaign 2014 Gold Winner</li>
+            <li>-unicef Global Innovation Initiative Awards 1st Prize</li>
+            <li>-2013 Korea SNS Awards Winner : Non-profit</li></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="jaeho" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">이재호</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>피넛, (전) G마켓</p>
+        <b>Position</b><p>대표</p> 
+        <b>Expertise</b><p>소프트웨어 개발, e-commerce</p>
+        <b>Bio</b>
+        <p>전세계의 모든 product을 DB화, 표준화 하는 Pnutree 서비스 주식회사 피넛의 대표이사이다. 피넛을 창업하기 전, 국내의 대표적 오픈마켓인 G 마켓의 연구개발 총괄 책임자였으며 이베이(ebay)에 매각 후 개발담당 상무를 역임했다. 현재 고려대학교 정보보호 대학원에 재학중이다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="manhee" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">이만희</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>(주)누리봄</p>
+        <b>Position</b><p>CTO</p> 
+        <b>Expertise</b><p>소프트웨어 개발, 헬스케어, 스마트 교육, 기술사업화</p>
+        <b>Bio</b>
+        <p>SW기업의 CTO로 일하며 사업기획과 기술사업화에 관심을 갖고 UTD의 MOT과정과 실리콘밸리의 대표적인 Think Tank인 SRI의 기술사업화 과정을 수료했다.이스라엘 기술의 사업화와 Startup 기업들과의 협력을 위해서도 지속적인 노력을 하고 있으며 직원들의 아이디어 및 기술사업화 장려를 위해 SRI의 프로세스를 도입해서 시행하고 있다.한국항공대학에서 항공전자공학을 대학원에서 컴퓨터공학을 전공했으며 기업의 사회 공헌을 위해 문화, 예술, 사회, 정치 분야의 실험적인 프로젝트를 추진하고 있다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="mina" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">이미나</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>5Rocks</p>
+        <b>Position</b><p>Executive PR Director</p> 
+        <b>Expertise</b><p>PR, 마케팅</p>
+        <b>Bio</b>
+        <p>17년 경력의 PR 전문가. 검색엔진, 온라인 음악, 게임, 소셜미디어 등 다양한 온라인/모바일 서비스를 개발하는 Tech Based Startup 을 주로 홍보해 왔습니다. 엠파스, 첫눈, 태터앤컴퍼니, 엔써즈, 본엔젤스벤처파트너스 등을 거쳐 현재는 5Rocks 의 홍보를 담당하고 있습니다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+ <div class="modal fade" id="sooin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">이수인</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>LocoMotive Labs</p>
+        <b>Position</b><p>CEO</p> 
+        <b>Expertise</b><p>투자, 실리콘 밸리, 미국, 창업자 마인드</p>
+        <b>Bio</b>
+        <p>2012년부터 미국 버클리에서 LocoMotive Labs를 창업, 학습에 어려움이 있는 아이들을 위한 학습 소프트웨어를 제작하고 있습니다. NewSchools Venture Fund, K9 Ventures, 500 Startups 등 실리콘밸리의 VC와 엔젤투자자로부터 시드 라운드를 통해 $1M을 투자유치하였고, Zynga.org와 NewSchools Venture Fund가 함께 만든 Education Game Accelerator인 Co.Lab의 첫번째 cohort로 참여하였습니다. Launch Education & Kids 컨퍼런스에서 Best Design 상을 수상했고, TEDxBayArea에서의 스피치등을 했습니다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="seunghwa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">오승환</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>KAIST</p>
+        <b>Position</b><p>초빙교수/글로벌창업연계실 실장</p> 
+        <b>Expertise</b><p>반도체, 투자, 창업</p>
+        <b>Bio</b>
+        <p>서울대학교 공과대학과 카이스트(KAIST)에서 수학하여 각각 금속공학 학사, 재료공학 석사를 취득하였다. 미국 스탠포드 대학에서 반도체 전공으로 전기공학 석사, 재료공학 박사 학위를 취득하였다. 실리콘밸리의 National Semiconductor, 일본의 Sharp, 한국의 삼성전자 등 한미일 삼국의 반도체 대기업에서 근무한 후 반도체 벤처기업 리디스테크놀로지(Leadis Technology)를 창업, 나스닥(NASDAQ)에 상장 시켰다. 2009년에는 중국 베이징에서 청화대학과 프랑스 INSEAD가 공동으로 주관하는 Executive MBA과정을 마쳤다. 2006년 부터는 미국의 벤쳐캐피탈 회사인 Walden International의 Venture Partner로 벤처투자 자문을 하였고 현재 KAIST 기업가정신진흥원 글로벌창업연계실 실장으로 창업활동을 지원하고 있다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="phill" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">윤필구</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>Big Basin Capital</p>
+        <b>Position</b><p>파트너</p> 
+        <b>Expertise</b><p>벤처 캐피탈 투자</p>
+        <b>Bio</b>
+        <p>Big Basin Capital is a venture capital firm based in Silicon Valley. Our focus is to invest in early-stage startups in Korea and the US, and assist them throughout their growth period.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="sungmoon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">조성문</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>Oracle America</p>
+        <b>Position</b><p>Principal Product Manager</p> 
+        <b>Expertise</b><p>Mobile, Game, Enterprise Application, Angel Investment</p>
+        <b>Bio</b>
+        <p>미국 오라클의 프로덕트매니저로, 현재는 CRM 고객들을 위한 태블릿 애플리케이션을 제작하고 있다. 실리콘밸리 최대의 한국인 네트워크 ‘베이 에어리어 K 그룹(Bay Area K Group)’의 부회장 및 공동대표를 역임했으며(2012), 지금은 이사회 임원이다. '조성문의 실리콘밸리 이야기' 블로그 운영자이며 테크니들의 집필진으로도 활동하고 있다.<br>서울대학교 전기공학부에서 컴퓨터과학을 공부했다. 게임빌의 창업멤버로 7년간 모바일게임 개발팀을 이끌다가, UCLA 앤더슨스쿨 MBA과정을 졸업한 후 실리콘밸리 생활을 시작했다. 현재 캘리포니아 산마테오에서 아내와 딸과 함께 살고 있다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="nari" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Nari Choi</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>XSeed Capital</p>
+        <b>Position</b><p>Principal</p> 
+        <b>Expertise</b><p>Venture investment, Strategy</p>
+        <b>Bio</b>
+        <p>Nari Choi is a Principal at XSeed Capital, venture capital firm in Silicon Valley that invests in early stage technology company. She has proficiency in strategic planning and management of innovative technologies. Prior to joining XSeed, Nari worked as a Chief Technology Strategist in the CTO Strategy Office at Samsung Electronics. She holds a BS with honors in Electronic and Computer Engineering and a BA in International Studies from Pusan National University, as well as an MS in Management from the Stanford Graduate School of Business.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="yoonsup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">최윤섭</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>KT 융합기술원</p>
+        <b>Position</b><p>팀장</p> 
+        <b>Expertise</b><p>헬스케어</p>
+        <b>Bio</b>
+        <p>IT와 생명과학, 의학의 컨버젼스를 통해 사회적 가치를 창출하고 환자들의 삶을 개선하는 것을 화두로 삼고 있는 융합 생명과학자이자, Blogger, Health IT Convergence Evangelist 입니다. IT, BT 및 의학에 대한 융합적인 백그라운드를 바탕으로, 현재는 kt융합기술원 미래사업개발그룹에서 혁신적인 의료서비스를 만들기 위해 노력하고 있습니다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="sungtae" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">안성태</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>KAIST</p>
+        <b>Position</b><p>초빙교수/글로벌창업연계실 실장</p> 
+        <b>Expertise</b><p>반도체, 투자, 창업</p>
+        <b>Bio</b>
+        <p>서울대학교 공과대학과 카이스트(KAIST)에서 수학하여 각각 금속공학 학사, 재료공학 석사를 취득하였다. 미국 스탠포드 대학에서 반도체 전공으로 전기공학 석사, 재료공학 박사 학위를 취득하였다. 실리콘밸리의 National Semiconductor, 일본의 Sharp, 한국의 삼성전자 등 한미일 삼국의 반도체 대기업에서 근무한 후 반도체 벤처기업 리디스테크놀로지(Leadis Technology)를 창업, 나스닥(NASDAQ)에 상장 시켰다. 2009년에는 중국 베이징에서 청화대학과 프랑스 INSEAD가 공동으로 주관하는 Executive MBA과정을 마쳤다. 2006년 부터는 미국의 벤쳐캐피탈 회사인 Walden International의 Venture Partner로 벤처투자 자문을 하였고 현재 KAIST 기업가정신진흥원 글로벌창업연계실 실장으로 창업활동을 지원하고 있다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="garett" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Garett Wiley</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>798 Group</p>
+        <b>Position</b><p>Managing Director</p> 
+        <b>Expertise</b><p>All aspects of early stage company development and growth from zero stage to pre-IPO / acquisition: legal, general management, financing, business planning, product development / management, sales, marketing / PR, organizational development, partnerships, international legal and operating strategies, including United States, China, India, and Southeast Asia.</p>
+        <b>Bio</b>
+        <p>I am a life-long entrepreneur and attorney. In addition to serving on the Board or as an advisor to various technology-related startup companies and non-profit organizations, I co-founded two successful venture-capital backed companies—Red 5 Studios, a leading global developer of online games funded by Benchmark Capital and Sierra Ventures (acquired by NASDAQ:NCTY); and NewRiver, an online financial services company funded by Pequot Capital and Lazard Technology Partners (acquired by NYSE:BR).
+
+        I am particularly passionate about making a difference in how we learn. Many of my current projects are focused on education technology and games and learning.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="tim" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Tim Chae</h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>500 Startup</p>
+        <b>Position</b><p>EIR</p> 
+        <b>Expertise</b><p>Product, UI/UX, Fundraising, Pitching, Social and Content Marketing, SV network</p>
+        <b>Bio</b>
+        <p>Been doing my own startups since I was 13 ranging from the entertainment world to software. At 18, named Youth Entrepreneur of the Year by NFIB and McKelvey Foundation. While attending Babson College pursuing a Tech Entrepreneurship and Design degree, I became one of the youngest VCs at the age of 19 as an Associate for Romulus Capital, a micro-VC firm in Boston, MA. Most recently, I was founder and CEO of PostRocket (backed by 500 Startups and Polaris Ventures), which at its peak was a market leader in Facebook Newsfeed Optimization servicing over 50,000 Facebook Pages and its 400M Facebook fans. PostRocket ultimately failed after almost 4 years of trying and hopefully, I can help other companies not fail with their startup as I did with PostRocket. Now I am over at 500 Startups heading up investments and initiatives in Korea for #500Strong.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="wyp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">박원영 </h4>
+      </div>
+      <div class="modal-body">
+        <b>Company</b><p>Lawrence Berkeley National Laboratory</p>
+        <b>Position</b><p>Senior Research Associate</p> 
+        <b>Expertise</b><p>Policy Analysis, R&D Planning, Digital Displays, Energy Efficiency, Environmental Energy Technologies</p>
+        <b>Bio</b>
+        <p>Won Young Park is a Researcher in the International Energy Studies Group at Lawrence Berkeley National Laboratory (LBNL). He has been working on technical analysis and program development for the Super-efficient Equipment and Appliance Deployment (SEAD) Initiative, the Global Lighting and Energy Access Partnership (Global LEAP), and the Electric Vehicles Initiative (EVI) formed within the Clean Energy Ministerial. Prior to LBNL, he worked as a research engineer with Samsung SDI in Korea. He received a Bachelor of Science in Physics from Yonsei University, Korea, and a Master of Public Policy from UC Berkeley’s Goldman School of Public Policy.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- footer-->
+<!-- <footer id="contact">
+            <div class="col-4-12">&nbsp;</div>
+            <div class="col-1-12"><img src="img/d3logo_white.png"width="100px">
+            </div>
+            <div class="col-7-12" id="copyright">Copyright© 2011-2013 by D3. All rights reserved.</div>
+
+       
+
+  
+</footer>
+  -->
+
+
+       
+
+
+<!-- script link-->
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+<!-- <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<!-- 
+<script src="js/plugin/jquery.jcarousel.js"></script>
+<script src="js/plugin/jcarousel.simple.js"></script>
+<script src="js/plugin/tooltipster.js"></script> -->
+<script src="js/plugin/classie.js"></script>
+<script src="js/plugin/vs-carsousel.js"></script>
+<!-- <script src="js/plugin/animated_head.js"></script> -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('.tooltip').tooltipster({
+   animation: 'fade',
+   delay: 200,
+   theme: '.tooltipster-default',
+   touchDevices: true,
+   trigger: 'click'
+});
+    });
+  </script>
+
+
+
+</body>
+</html>
+
+
+
+

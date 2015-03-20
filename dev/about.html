@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="eng" class="no-js lt-ie9 lt-ie8 lt-ie7"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>D3 | Redefine Growth</title>
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+
+     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" media="Screen">
+    <script src="js/modernizr.custom.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('require', 'displayfeatures');
+  ga('create', 'UA-49627023-1', 'd3jubilee.com');
+  ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="img/d3logolong_white.png" width="220"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav" id="menu">
+                <li><a href="about.html">about</a></li>
+              
+                 <li><a href="d3plus.html">D3<span id="plus">+</span></a></li>
+                <li><a href="engine.html">Impact Engine</a></li>
+                <li><a href="map.html">Impact Map</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+  <div class="hero" id="team">
+    <div class="main">
+        <section class="white brand">
+         <h1>TEAM<span class="thin-font"> Here we are</span></h1>
+         <p>D3 has multi-located offices in Seoul, Korea and Palo Alto, USA. Our team work with international and domestic social entrepreneur and investor to pursue "making better world".</p>
+          
+        </section>
+      </div>
+    </div>
+
+    
+
+
+
+<div class="container-fluid" id="team_bg">
+
+  <div class="row" id="team_profile">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-12" id="title">Team</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+              <img src="img/team/doug.png">
+              
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Doug Duckjun LEE </h5>
+              <h6 id="position">CEO | USA &amp; Korea</h6>
+            <p>Doug is an angel investor in Korea and the San Francisco bay area.  He moved to the space of impact investment in 2010. He is a former CFO of Gmarket (acquired by eBay). Prior to Gmarket, he was an investment banker with Schroders, Citigroup and Credit Suisse. He holds a master's degree in Accounting and Finance from London School of Economics and a bachelor's degree from Seoul National University.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <img src="img/team/jaehyun.png">
+            
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Jaehyun Kim</h5>
+            <h6 id="position">Managing Partner | Korea</h6>
+            <p>Mr. Kim started his own business in 2002, and has been managed 'Crevisse Partners' since 2006. He is also the CEO of Kyowon Creatives. He holds a bachelor’s degree of Business Management from Seoul National University.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <img src="img/team/q.png">
+            
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Namkyu Ryoo </h5>
+            <h6 id="position">Design Partner | Korea</h6>
+            <p>Namkyu is an entrepreneur and Full Stack designer which cover from UX, UI and Web development. He is mainly focused on "how human can intuitvely interact with data and information in the era of complexity" He tried to find an intersection between 3-year study at engineering world and design study at the the School of Art Institute of Chicago. He is bootstraping his own startup in healthcare industry. He also worked on mobile/web product as visual/interaction designer for Morningstar around 3 years.</p>
+          </div>
+        </div>
+
+
+<div class="row">
+          <div class="col-md-3">
+            <img src="img/team/young.png">
+            
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Jiyoung Lee</h5>
+            <h6 id="position">Global Portfolio Manager | USA</h6>
+            <p>Jiyoung's professional ambitions have always been to strike a balance between social responsibility and business profitability. She believes impact investment is an effective means for helping socially responsible businesses thrive, making our world a better place. Prior to joining D3, Jiyoung founded NADOO, a lifestyle sharing platform with e-commerce engine. Prior to NADOO, she worked as analytics specialist at ZeroDesktop, a San Mateo based cloud technology startup. She has also worked in fund sales and securities structuring roles at Goldman Sachs Asset Management in Korea and Merrill Lynch in Hong Kong. She started her career at Kookmin Bank. Jiyoung received her MBA from the University of Chicago Booth School of Business and a bachelor's degree from Korea University. She is also a CFA charterholder.</p>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-3">
+            <img src="img/team/dong.png">
+            
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Haedong Shin </h5>
+            <h6 id="position">Analyst | Korea</h6>
+            <p>Haedong lives by the saying, “If you don’t do anything, nothing’s going to happen.”  He gained a passion for social issues through a volunteer mentoring program, and is fascinated by impact investment – how capital markets can be used to benefit society.  An all-round sportsman, Haedong loves football and table tennis.   He holds a bachelor’s dgree in Economics from the Konkuk University.</p>
+          </div>
+        </div>
+
+         
+
+         <div class="row">
+          <div class="col-md-3">
+            <img src="img/team/kyung.png">
+            
+          </div>
+          <div class="col-md-9">
+            <h5 id="name">Jun gyeong Kyung</h5>
+            <h6 id="position">Analyst | Korea</h6>
+            <p>Jungyeong was a college student majoring mechanical system engineering and business administration. Prior to D3, he was scheduled to be a researcher for car development at Ssangyong motor. But he decided to be with D3 to look for experiences about social venture - how is social ventures  built up by impact investment. He took part in volunteer program - Habitat at Indonesia and Philippines. He gained hope of making impact through the volunteer programs. he works saying 'If plan A didn't work, there are 100 more options'. </p>
+          </div>
+        </div>
+
+         <div class="row">
+          <div class="col-md-3">
+            <img src="img/team/yuri.png">
+           
+          </div>
+          <div class="col-md-9">
+             <h5 id="name">Yuri Son</h5>
+            <h6 id="position">Designer | Korea</h6>
+            <p>Yuri believes that doing the right thing is more important than doing the thing right. She joined D3Jubilee to learn what entrepreneurs do to make the world a better place. She enjoys observing how people behave and hopes to design things that inspire them.Yuri majored Product and User Experience Design from Korea University.</p>
+          </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+<!-- modal -->
+
+<!-- heekyung -->
+<div class="modal fade" id="heekyoung" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">HK Lucia Cho</h4>
+      </div>
+      <div class="modal-body">
+        <p>Ms. Cho is the Executive Director of Kwangjuyo Group, a group that comprises numerous international affiliated Korean culture businesses. She has been working dynamically in design, food and culture industry. She holds a bachelor's degree in Fine Arts and a master's degree in Business Administration from US institutes, a degree in Culinary Arts in Tokyo and a master degree in Gastronomic Sciences in Parma, Italy. She also actively sponsors Seoul Phil Harmonic Orchestra, Korea National Museum and Korea National Ballet.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- kevin -->
+<div class="modal fade" id="kevin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Kevin Chung</h4>
+      </div>
+      <div class="modal-body">
+        <p>Mr. Chung is the Director of Corporate Strategy at Coupang.  Prior to Coupang, he was a consultant with McKinsey & Company.   Before McKinsey, he was an investment banker with Credit Suisse and Citigroup based in Hong Kong. Mr. Chung holds a bachelor's degree in Operations Research from Columbia University and a MBA from Kellogg School of Management.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Jae Hyun Kim -->
+
+<div class="modal fade" id="jaehyun" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Jae Hyun Kim</h4>
+      </div>
+      <div class="modal-body">
+        <p>Mr. Kim started his own business in 2002, and has been managed 'Crevisse Partners' since 2006.  He is also the CEO of Kyowon Creatives. He holds a bachelor’s degree of Business Management from Seoul National University.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Jae Yoon Kim-->
+<div class="modal fade" id="jaeyoon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Jae Yoon Kim</h4>
+      </div>
+      <div class="modal-body">
+        <p>Mr. Kim is a partner in Global Clients Service Group of PwC Korea office. He was the US IPO team partner responsible for US GAAP & SEC Services, International Financial Reporting Standards(IFRS), accounting conversions, US IPOs and ongoing support to registrants and preparers. He holds a master's degree in Finance and a bachelor's degree in Economics from Seoul National University.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- James  Joonkoo Kim-->
+  <div class="modal fade" id="james" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">James  Joonkoo Kim</h4>
+      </div>
+      <div class="modal-body">
+        <p>Mr. Kim is an Associate Partner at GK partners, specializing in new business development and partnering strategies. Prior to GK partners, he was an investment banker with Salomon Smith Barney, Samsung Securities and BNP Paribas. Mr. Kim holds a bachelor’s degree in Economics from the University of California, San Diego.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+   <!-- Won Young Kim-->
+
+   <div class="modal fade" id="wonyoung" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Won Young Kim</h4>
+      </div>
+      <div class="modal-body">
+        <p>He is a founding member and a managing director of Crevisse Partners. He is in charge of corporate strategy and investment. He has bachelor degree in business administration at Yonsei University, and is an MBA candidate of Social Entrepreneurship MBA at KAIST</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Joo Ohk Yi-->
+
+ <div class="modal fade" id="jooohk" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Joo Ohk Yi</h4>
+      </div>
+      <div class="modal-body">
+        <p>Ms. Yi is a Leader of Relation & Support Department at Tencent Korea. She  was a consultant with McKinsey & Company.  Prior to McKinsey, she worked as an Associate at LECG, a litigation consulting firm in Washington D.C.  Ms. Yi holds a bachelor's degree in Economics from the College of William and Mary in V.A. and a MBA from China Europe International Business School (CEIBS) in Shanghai, PRC.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Chull-Young Lee-->
+<div class="modal fade" id="chullyoung" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Chull-Young Lee</h4>
+      </div>
+      <div class="modal-body">
+        <p>Mr. Lee is the CEO of SEN (Social Enterprise Network) and an honorary professor of Sookmyung Women’s University. He has been the J-V Partner and Co-Chairman of Bausch & Lomb Korea Co. Ltd., since 1983, and CEO and Chairman of ARK Private Fund Investment Advisors Inc., Seoul, whose principles are Value Investing and Socially Responsible Investing (SRI). He holds a bachelor’s degree in Business Administration from Seoul National University and a master’s degree from Columbia Business School. He received a presidential citation in both 1976 and 1992.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Eung Jin Lee-->
+<div class="modal fade" id="eungjin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Eung Jin Lee</h4>
+      </div>
+      <div class="modal-body">
+        <p>Mr. Lee is the managing attorney of LAWPLEX Law offices, a boutique law firm specializing in M&A, fund establishment, and other cross-border transactions-related legal services. Prior to LAWPLEX, he worked as Managing Partner in KIM&LEE (formerly known as KIM, LEE & Partner), Chief Legal Officer at Skylake Incuvest & Co., Chief Strategy Officer at Sidus Corporation, Junior Partner in Kim & Chang, among others. Mr. Lee holds an L.L.B. from Seoul National University, L.L.M. from Harvard Law School, and L.L.M. in Taxation from the New York University of Law.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="youngbae" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Young Bae Ku</h4>
+      </div>
+      <div class="modal-body">
+        <p>(전) G 마켓 CEO & 공동창업자</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="jaeho" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Jae Ho Lee</h4>
+      </div>
+      <div class="modal-body">
+        <p>(전) G마켓 연구개발총괄 책임자</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="sookyung" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Sookyung Kim</h4>
+      </div>
+      <div class="modal-body">
+        <p>Ph.D, Arts & Humanities, NYU</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="moowi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Moowi Kim</h4>
+      </div>
+      <div class="modal-body">
+        <p>(전) JP Morgan, 골드만삭스</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="daesik" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Daesik Yang</h4>
+      </div>
+      <div class="modal-body">
+        <p>(전) G 마켓 CTO & 공동창업자</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="cindy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Cindy Yunjung Jin</h4>
+      </div>
+      <div class="modal-body">
+        <p>책임 심사역, 소프트뱅크벤쳐스</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="richard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Richard Bigs</h4>
+      </div>
+      <div class="modal-body">
+        <p>전무이사, D3</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="doug" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Doug Duckjun LEE</h4>
+      </div>
+      <div class="modal-body">
+        <p>CEO, D3</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</div><!-- container-fluid -->
+
+           
+</div> 
+
+
+
+
+
+
+
+<!-- footer-->
+<footer id="contact">
+  <div class="col-md-4"></div>
+  <div class="col-md-1">
+    <a href="#"><img src="img/d3logo_white.png"width="100px"></a>
+  </div>
+  <div class="col-md-7" id="copyright">Copyright© 2011-2014 by D3. All rights reserved.</div>
+</footer>
+
+
+
+
+
+       
+
+    <!-- script link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/plugin/modal.js"></script>
+    
+
+
+
+
+</body>
+</html>
+
+
+
+

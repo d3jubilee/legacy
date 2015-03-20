@@ -1,0 +1,50 @@
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 450px) {
+	#partner-logo img{width:60%;}
+	#team_bg div{text-align: center;}
+    #apply_btn div a{font-size:1em;}
+    #program, #apply{padding:0;}
+    #engine-sector img{width: 70%;}
+ 	#address{margin: 30px 0;}
+ #service section div{margin-bottom:30px;}
+  #woofu{margin:0;}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 451px) and (max-width: 980px) {
+	#partner-logo img{width:30%;}
+	#team_bg div{text-align: center;}
+	#program, #apply{padding:0 8.8888889%;}
+	#engine-sector img{width: 60%;}
+	#team_profile div, #team_profile h5,#team_profile h6 {text-align: center;}
+	#team_profile p{text-align: left;margin:0 10.3199174%;}
+	#newsgrid{text-align: center;margin: 0 15.3846154%;}
+	#address{margin: 30px 0;}
+	#service section div{margin-bottom:50px;}
+	 #woofu{margin:0;}
+ 	
+}
+
+
+
+/****** media query *****/
+@media handheld,only screen and (min-width:300px) and (max-width:410px) {
+.container-sm{width:300px;margin:0 auto;}
+#team{height:400px;}
+
+}
+
+@media handheld,only screen and (min-width:410px) and (max-width:600px) {
+.container-sm{width:400px;margin:0 auto;}
+}
+
+@media handheld,only screen and (min-width:600px)and (max-width:787px) {
+.container-sm{width:500px;margin:0 auto;}
+
+}
+
+
+@media handheld,only screen and (min-width:850px) {
+
+.navbar-collapse{float:right;}
+}

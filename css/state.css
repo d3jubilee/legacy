@@ -1,0 +1,28 @@
+.sticky{
+	position:fixed;
+	width:100%;
+	left:0;
+	top:0;
+	z-index:100;
+	opacity: 0.8;
+	/*bottom:auto;*/
+}
+
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+#brand-message h5 { 
+	/*background-color:rgba(255,255,255,0.4);*/
+	/*border-radius:4px;*/
+	padding:20px;
+	border-right: .1em solid white;
+	width:100%;
+	/*width: 16.5em; */
+	/*width: 21ch;*/
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 9s steps(21, end),
+	           blink-caret .5s step-end infinite alternate;
+}
